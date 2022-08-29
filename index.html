@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <link id="css" rel="stylesheet" href="style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+  <title>Frontend Mentor | [Challenge Name Here]</title>
+
+</head>
+<body>
+  <header>
+  </header>
+
+  <section class="dashboard">
+    <div class="heading">
+      <div>
+        <h1>Social Media Dashboard</h1>
+        
+        <p class="total">Total Followers: 23,004</p>
+      </div>
+    
+      <div class="night-mode">
+        <p>Dark Mode</p>
+        <label class="switch">
+          <input type="checkbox" id="dark-mode">
+          <span class="slider round"></span>
+        </label>
+      </div>
+    </div>
+    
+    <div class="header-stats">      
+      <div class="facebook social">
+        <div class="border"></div>
+        <a href="#" class="profile">@nathanf</a>
+        <p class="subscribers">1987<span>Followers</span></p>
+        <p class="dynamic" id="pos">12 Today</p>
+      </div>
+
+      <div class="twitter social">
+        <div class="border"></div>
+        <a href="#" class="profile">@nathanf</a>
+        <p class="subscribers">1044<span>Followers</span></p>
+        <p class="dynamic" id="pos">99 Today</p>
+      </div>
+
+      <div class="instagram social">
+        <div class="border"></div>
+        <a href="#" class="profile">@realnathanf</a>
+        <p class="subscribers">11k<span>Followers</span></p>
+        <p class="dynamic" id="pos">1099 Today</p>          
+      </div>
+
+      <div class="youtube social">
+        <div class="border"></div>
+        <a href="#" class="profile">Nathan F.</a>
+        <p class="subscribers">8239<span>subscribers</span></p>
+        <p class="dynamic" id="neg">144 Today</p>
+      </div>
+    </div>
+
+    <h2>Overview - Today</h2>
+    <div class="overview">
+      <div id="facebook">
+        <p class="stat">Page Views</p>
+        <p class="numbers" >87<span id="pos">3%</span></p>
+      </div>
+
+      <div id="facebook">
+        <p class="stat">Likes</p>
+        <p class="numbers">52<span id="neg">2%</span></p>
+      </div>
+
+      <div id="instagram">
+        <p class="stat">Likes</p>
+        <p class="numbers">5462<span id="pos">2257%</span></p>
+      </div>
+
+      <div id="instagram">
+        <p class="stat">Profile Views</p>
+        <p class="numbers">52k<span id="pos">1375%</span></p>
+      </div>
+
+      <div id="twitter">
+        <p class="stat">Retweets</p>
+        <p class="numbers">117<span id="pos">303%</span></p>
+      </div>
+
+      <div id="twitter">
+        <p class="stat">Likes</p>
+        <p class="numbers">507<span id="pos">553%</soan></p>
+      </div>
+
+      <div id="youtube">
+        <p class="stat">Likes</p>
+        <p class="numbers">107<span id="neg">19%</span></p>
+      </div>
+
+      <div id="youtube">
+        <p class="stat">Total Views</p>
+        <p class="numbers">1407<span id="neg">12%</span></p>
+      </div>
+  
+    </div>
+  </section>
+ 
+  <script>
+    const toogle = document.querySelector('#dark-mode');
+    const stylesheet = document.querySelector('#css');
+
+    toogle.addEventListener('click', () => {
+      if (toogle.checked){
+        stylesheet.setAttribute('href', 'style-dark.css');
+      } else {
+      stylesheet.setAttribute('href', 'style.css');
+      }
+    })
+    
+  </script>
+
+</body>
+</html>

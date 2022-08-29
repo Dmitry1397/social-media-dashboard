@@ -1,0 +1,367 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Inter', sans-serif;
+    font-size: 10px;
+}
+
+body {
+    margin: 0;
+    background: hsl(230, 17%, 14%);
+    position: relative;
+}
+
+header {
+    height: 25rem;
+    background: hsl(232, 19%, 15%);
+
+    border-radius: 0 0 10px 20px;
+}
+
+.night-mode {
+    display: flex;
+    align-items: center;
+}
+
+.night-mode p{
+    margin-right: 20px;
+    font-weight: 700;
+    font-size: 20px;
+    color: hsl(228, 34%, 66%);
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 28px;
+}
+  
+.switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+  
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+  
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 22px;
+    width: 22px;
+    left: 3px;
+    bottom: 2.5px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+  
+input:checked + .slider {
+    background: linear-gradient(90deg, hsl(210, 78%, 56%) 0%, hsl(146, 68%, 55%) 100%);
+}
+
+input + .slider {
+    background: hsl(228, 12%, 44%);
+}
+
+input:checked + .slider::before {
+    background-color: hsl(230, 17%, 14%);
+}
+  
+input:checked + .slider:before {
+    -webkit-transform: translateX(32px);
+    -ms-transform: translateX(32px);
+    transform: translateX(32px);
+}
+  
+  /* Rounded sliders */
+.slider.round {
+    border-radius: 30px;
+}
+  
+.slider.round:before {
+    border-radius: 50%; 
+}
+
+
+.heading {
+    display: flex;
+    justify-content: space-between;
+}
+
+.total {
+    margin: 0;
+    color: hsl(228, 34%, 66%);
+    font-weight: 700;
+}
+
+.dashboard {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 50px 150px;
+}
+
+.header-stats {    
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 30px;
+}
+
+.social {
+    padding: 20px 0;
+    background: hsl(228, 28%, 20%);
+    border-radius: 5px;
+    
+    position: relative;
+    overflow: hidden;
+}
+
+.social:hover {
+    background: hsl(228, 28%, 25%);
+    cursor: pointer;
+}
+
+.header-stats .border {
+    position: absolute;
+    top: 0;
+    padding: 0;
+    width: 100%;
+    height: 5px;
+    border-radius: 0;
+}
+
+
+.facebook .border {
+    background: hsl(208, 92%, 53%);
+}
+
+.twitter .border {
+    background: hsl(203, 89%, 53%);
+}
+
+.instagram .border {
+    background: linear-gradient(90deg, hsl(37, 97%, 70%) 0%, hsl(329, 70%, 58%) 100%);
+}
+
+.youtube .border {
+    background: hsl(348, 97%, 39%);
+}
+
+.profile {
+    display: block;
+    width: max-content;
+    margin: 0 auto;
+    padding-left: 25px;
+    text-decoration: none;
+    color: hsl(228, 34%, 66%);
+    font-weight: 700;
+    font-size: 14px;
+    text-align: center;
+}
+
+.profile:hover {
+    color: hsl(0, 0%, 100);
+}
+
+.facebook .profile {
+    background: url(images/icon-facebook.svg) no-repeat left / contain;
+}
+
+.twitter .profile {
+    background: url(images/icon-twitter.svg) no-repeat left / contain;
+}
+
+.instagram .profile {
+    background: url(images/icon-instagram.svg) no-repeat left / contain;
+}
+
+.youtube .profile {
+    background: url(images/icon-youtube.svg) no-repeat left / contain;
+}
+
+.subscribers {
+    margin: 30px 0;
+    color: hsl(0, 0%, 100%);
+    font-weight: 700;
+    font-size: 5rem;
+    text-align: center;
+}
+
+.subscribers span {
+    display: block;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: hsl(228, 34%, 66%);
+    font-size: 14px;
+}
+
+.dynamic {
+    width: max-content;
+    margin: 0 auto;
+    text-align: center;
+    font-weight: 700;
+    font-size: 14px;
+    padding-left: 10px;
+}
+
+.overview {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 30px;
+}
+
+.overview div {
+    background: hsl(228, 28%, 20%);
+    padding: 30px;
+    border-radius: 5px;
+}
+
+.overview div:hover {
+    background: hsl(228, 28%, 25%);
+    cursor: pointer;
+}
+
+.stat {
+    margin: 0;
+    padding: 5px 0;
+    font-weight: 700;
+    font-size: 14px;
+    color: hsl(228, 34%, 66%);
+}
+
+
+#facebook .stat {
+    background: url(images/icon-facebook.svg) no-repeat right / contain;
+}
+
+#twitter .stat {
+    background: url(images/icon-twitter.svg) no-repeat right / contain;
+}
+
+#instagram .stat {
+    background: url(images/icon-instagram.svg) no-repeat right / contain;
+}
+
+#youtube .stat {
+    background: url(images/icon-youtube.svg) no-repeat right / contain;
+}
+
+
+.numbers {
+    margin: 0;
+    margin-top: 20px;
+    font-weight: 700;
+    font-size: 2.5rem;
+    color: hsl(0, 0%, 100%);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.numbers span {
+    display: block;
+    height: max-content;
+    padding-left: 10px;
+    font-size: 12px;
+    line-height: ;
+}
+
+#pos {
+    color: hsl(163, 72%, 41%);
+    background: url(images/icon-up.svg) no-repeat left center;
+}
+
+#neg {
+    color: hsl(356, 69%, 56%);
+    background: url(images/icon-down.svg) no-repeat left center;
+}
+
+h1 {
+    margin: 0;
+    font-size: 3.2rem;
+    color: hsl(0, 0%, 100%)
+}
+
+h2 {
+    margin-top: 50px;
+    font-size: 2.5rem;
+    color: hsl(0, 0%, 100%);
+}
+
+@media screen and (max-width: 500px) {
+    
+    .heading {
+        display: block;
+    }
+
+    .heading h1 {
+        font-size: 2.5rem;
+    }
+
+    .total {
+        margin-bottom: 10px;
+    }
+
+    .night-mode {
+        padding-top: 10px;
+        border-top: 2px solid hsl(228, 12%, 44%);
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .dashboard {
+        padding: 30px;
+    }
+
+    .header-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .overview {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media screen and (min-width: 500px) and (max-width: 900px) {
+
+    .dashboard {
+        padding: 50px;
+    }
+
+    .header-stats {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .overview {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 901px) and (max-width: 1100px) {
+
+    .dashboard {
+        padding: 50px;
+    }
+
+    .overview div {
+        padding: 20px;
+    }
+}
